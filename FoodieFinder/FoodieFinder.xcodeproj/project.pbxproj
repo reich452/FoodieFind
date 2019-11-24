@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		014F1A00238B32B500D0D502 /* RestaurantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F19FF238B32B500D0D502 /* RestaurantCollectionViewCell.swift */; };
 		01BF68062389E26F0073193E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68052389E26F0073193E /* AppDelegate.swift */; };
 		01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68072389E26F0073193E /* SceneDelegate.swift */; };
 		01BF680F2389E2700073193E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BF680E2389E2700073193E /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		014F19FF238B32B500D0D502 /* RestaurantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionViewCell.swift; sourceTree = "<group>"; };
 		01BF68022389E26F0073193E /* FoodieFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodieFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BF68052389E26F0073193E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01BF68072389E26F0073193E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		014F19FE238B329500D0D502 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				014F19FF238B32B500D0D502 /* RestaurantCollectionViewCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		01BF67F92389E26E0073193E = {
 			isa = PBXGroup;
 			children = (
@@ -123,6 +133,7 @@
 			isa = PBXGroup;
 			children = (
 				01BF6839238B0EE80073193E /* Storyboards */,
+				014F19FE238B329500D0D502 /* Cells */,
 				01BF6838238B0EC70073193E /* ViewControllers */,
 				01BF6837238B0EBB0073193E /* ModelControllers */,
 				01BF6836238B0EB10073193E /* Model */,
@@ -433,6 +444,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01BF683B238B0FC30073193E /* RestaurantViewController.swift in Sources */,
+				014F1A00238B32B500D0D502 /* RestaurantCollectionViewCell.swift in Sources */,
 				01BF68062389E26F0073193E /* AppDelegate.swift in Sources */,
 				01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */,
 				01BF6841238B127E0073193E /* InternetViewController.swift in Sources */,

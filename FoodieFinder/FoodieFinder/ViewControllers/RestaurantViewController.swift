@@ -14,8 +14,8 @@ class RestaurantViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red        
-
+        
+        collectionView.dataSource = self
     }
     /*
     // MARK: - Navigation
@@ -26,4 +26,17 @@ class RestaurantViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+}
+
+extension RestaurantViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as? RestaurantCollectionViewCell else { return UICollectionViewCell() }
+        
+        return cell
+    }
 }
