@@ -10,10 +10,11 @@ import UIKit
 
 class RestaurantViewController: UIViewController {
 
+    @IBOutlet private weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        
+        view.backgroundColor = .red        
 
     }
     /*
