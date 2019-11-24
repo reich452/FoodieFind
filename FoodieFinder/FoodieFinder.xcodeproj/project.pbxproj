@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		014F1A00238B32B500D0D502 /* RestaurantCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F19FF238B32B500D0D502 /* RestaurantCollectionViewCell.swift */; };
+		014F1A02238B37DD00D0D502 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A01238B37DD00D0D502 /* Restaurant.swift */; };
+		014F1A04238B3B5A00D0D502 /* SampleRestaurants.json in Resources */ = {isa = PBXBuildFile; fileRef = 014F1A03238B3B5A00D0D502 /* SampleRestaurants.json */; };
+		014F1A06238B3B9E00D0D502 /* RestaurantTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A05238B3B9E00D0D502 /* RestaurantTest.swift */; };
+		014F1A09238B3C0700D0D502 /* NewJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A08238B3C0700D0D502 /* NewJSONDecoder.swift */; };
+		014F1A0B238B3C2900D0D502 /* NewJSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A0A238B3C2900D0D502 /* NewJSONEncoder.swift */; };
+		014F1A0E238B3FB000D0D502 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A0D238B3FB000D0D502 /* XCTestCase.swift */; };
 		01BF68062389E26F0073193E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68052389E26F0073193E /* AppDelegate.swift */; };
 		01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68072389E26F0073193E /* SceneDelegate.swift */; };
 		01BF680F2389E2700073193E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BF680E2389E2700073193E /* Assets.xcassets */; };
@@ -43,6 +49,12 @@
 
 /* Begin PBXFileReference section */
 		014F19FF238B32B500D0D502 /* RestaurantCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantCollectionViewCell.swift; sourceTree = "<group>"; };
+		014F1A01238B37DD00D0D502 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		014F1A03238B3B5A00D0D502 /* SampleRestaurants.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = SampleRestaurants.json; sourceTree = "<group>"; };
+		014F1A05238B3B9E00D0D502 /* RestaurantTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTest.swift; sourceTree = "<group>"; };
+		014F1A08238B3C0700D0D502 /* NewJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJSONDecoder.swift; sourceTree = "<group>"; };
+		014F1A0A238B3C2900D0D502 /* NewJSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJSONEncoder.swift; sourceTree = "<group>"; };
+		014F1A0D238B3FB000D0D502 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
 		01BF68022389E26F0073193E /* FoodieFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodieFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BF68052389E26F0073193E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01BF68072389E26F0073193E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -107,6 +119,31 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		014F1A07238B3BC000D0D502 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				014F1A08238B3C0700D0D502 /* NewJSONDecoder.swift */,
+				014F1A0A238B3C2900D0D502 /* NewJSONEncoder.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		014F1A0C238B3F9A00D0D502 /* Extentions */ = {
+			isa = PBXGroup;
+			children = (
+				014F1A0D238B3FB000D0D502 /* XCTestCase.swift */,
+			);
+			path = Extentions;
+			sourceTree = "<group>";
+		};
+		014F1A0F238B426200D0D502 /* Stub */ = {
+			isa = PBXGroup;
+			children = (
+				014F1A03238B3B5A00D0D502 /* SampleRestaurants.json */,
+			);
+			path = Stub;
+			sourceTree = "<group>";
+		};
 		01BF67F92389E26E0073193E = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +174,7 @@
 				01BF6838238B0EC70073193E /* ViewControllers */,
 				01BF6837238B0EBB0073193E /* ModelControllers */,
 				01BF6836238B0EB10073193E /* Model */,
+				014F1A07238B3BC000D0D502 /* Networking */,
 				01BF68052389E26F0073193E /* AppDelegate.swift */,
 				01BF68072389E26F0073193E /* SceneDelegate.swift */,
 				01BF680E2389E2700073193E /* Assets.xcassets */,
@@ -149,8 +187,11 @@
 		01BF681B2389E2710073193E /* FoodieFinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				014F1A0F238B426200D0D502 /* Stub */,
+				014F1A0C238B3F9A00D0D502 /* Extentions */,
 				01BF681C2389E2710073193E /* FoodieFinderTests.swift */,
 				01BF681E2389E2710073193E /* Info.plist */,
+				014F1A05238B3B9E00D0D502 /* RestaurantTest.swift */,
 			);
 			path = FoodieFinderTests;
 			sourceTree = "<group>";
@@ -167,6 +208,7 @@
 		01BF6836238B0EB10073193E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				014F1A01238B37DD00D0D502 /* Restaurant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -340,6 +382,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014F1A04238B3B5A00D0D502 /* SampleRestaurants.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -445,7 +488,10 @@
 			files = (
 				01BF683B238B0FC30073193E /* RestaurantViewController.swift in Sources */,
 				014F1A00238B32B500D0D502 /* RestaurantCollectionViewCell.swift in Sources */,
+				014F1A02238B37DD00D0D502 /* Restaurant.swift in Sources */,
+				014F1A0B238B3C2900D0D502 /* NewJSONEncoder.swift in Sources */,
 				01BF68062389E26F0073193E /* AppDelegate.swift in Sources */,
+				014F1A09238B3C0700D0D502 /* NewJSONDecoder.swift in Sources */,
 				01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */,
 				01BF6841238B127E0073193E /* InternetViewController.swift in Sources */,
 			);
@@ -455,6 +501,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014F1A06238B3B9E00D0D502 /* RestaurantTest.swift in Sources */,
+				014F1A0E238B3FB000D0D502 /* XCTestCase.swift in Sources */,
 				01BF681D2389E2710073193E /* FoodieFinderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
