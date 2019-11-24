@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F8Q-8y-5dM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Lunch-->
+        <scene sceneID="N4d-fM-0hC">
+            <objects>
+                <viewController storyboardIdentifier="RestaurantViewController" id="Ogv-fA-yZj" customClass="RestaurantViewController" customModule="FoodieFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2NL-S0-UeF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="An1-dG-SEa"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Lunch" image="tab_lunch" selectedImage="tab_lunch" id="yjv-hi-E70"/>
+                    <navigationItem key="navigationItem" id="QbO-jb-2qe"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="F1i-nW-uYU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="999" y="124"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ION-Gp-ytH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="F8Q-8y-5dM" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Rkk-JN-pUd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Ogv-fA-yZj" kind="relationship" relationship="rootViewController" id="JUr-Ja-TV8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XrO-Od-ZgN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="176.81159420289856" y="123.88392857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="tab_lunch" width="24" height="24"/>
+    </resources>
+</document>

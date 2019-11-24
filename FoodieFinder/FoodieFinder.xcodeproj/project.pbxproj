@@ -9,12 +9,15 @@
 /* Begin PBXBuildFile section */
 		01BF68062389E26F0073193E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68052389E26F0073193E /* AppDelegate.swift */; };
 		01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68072389E26F0073193E /* SceneDelegate.swift */; };
-		01BF680A2389E26F0073193E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68092389E26F0073193E /* ViewController.swift */; };
-		01BF680D2389E26F0073193E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BF680B2389E26F0073193E /* Main.storyboard */; };
 		01BF680F2389E2700073193E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BF680E2389E2700073193E /* Assets.xcassets */; };
 		01BF68122389E2700073193E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BF68102389E2700073193E /* LaunchScreen.storyboard */; };
 		01BF681D2389E2710073193E /* FoodieFinderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF681C2389E2710073193E /* FoodieFinderTests.swift */; };
 		01BF68282389E2710073193E /* FoodieFinderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68272389E2710073193E /* FoodieFinderUITests.swift */; };
+		01BF683B238B0FC30073193E /* RestaurantViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF683A238B0FC30073193E /* RestaurantViewController.swift */; };
+		01BF683D238B10CF0073193E /* Restaurant.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BF683C238B10CF0073193E /* Restaurant.storyboard */; };
+		01BF683F238B120A0073193E /* Internet.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BF683E238B120A0073193E /* Internet.storyboard */; };
+		01BF6841238B127E0073193E /* InternetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF6840238B127E0073193E /* InternetViewController.swift */; };
+		01BF6843238B14F90073193E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 01BF6842238B14F90073193E /* Main.storyboard */; };
 		5928A3F7EEB8BB8976563521 /* Pods_FoodieFinderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BE5CB3E9DA3892B3045EF3E /* Pods_FoodieFinderUITests.framework */; };
 		680EDE620378C843A9E98C54 /* Pods_FoodieFinder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01D50E3B6C6BC94010F83ADB /* Pods_FoodieFinder.framework */; };
 		A8673A6F5C76060D2C5003B9 /* Pods_FoodieFinderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C8EA1936F9CCDB68FF67F8A /* Pods_FoodieFinderTests.framework */; };
@@ -41,8 +44,6 @@
 		01BF68022389E26F0073193E /* FoodieFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodieFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BF68052389E26F0073193E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01BF68072389E26F0073193E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		01BF68092389E26F0073193E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		01BF680C2389E26F0073193E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		01BF680E2389E2700073193E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		01BF68112389E2700073193E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		01BF68132389E2700073193E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -52,6 +53,11 @@
 		01BF68232389E2710073193E /* FoodieFinderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodieFinderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BF68272389E2710073193E /* FoodieFinderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodieFinderUITests.swift; sourceTree = "<group>"; };
 		01BF68292389E2710073193E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		01BF683A238B0FC30073193E /* RestaurantViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewController.swift; sourceTree = "<group>"; };
+		01BF683C238B10CF0073193E /* Restaurant.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Restaurant.storyboard; sourceTree = "<group>"; };
+		01BF683E238B120A0073193E /* Internet.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Internet.storyboard; sourceTree = "<group>"; };
+		01BF6840238B127E0073193E /* InternetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InternetViewController.swift; sourceTree = "<group>"; };
+		01BF6842238B14F90073193E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		01D50E3B6C6BC94010F83ADB /* Pods_FoodieFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodieFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0413C777D0AF362587DA92F0 /* Pods-FoodieFinderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodieFinderTests.release.xcconfig"; path = "Target Support Files/Pods-FoodieFinderTests/Pods-FoodieFinderTests.release.xcconfig"; sourceTree = "<group>"; };
 		3736D5EA9611FF4B2BC6D1F4 /* Pods-FoodieFinderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodieFinderUITests.release.xcconfig"; path = "Target Support Files/Pods-FoodieFinderUITests/Pods-FoodieFinderUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,10 +122,12 @@
 		01BF68042389E26F0073193E /* FoodieFinder */ = {
 			isa = PBXGroup;
 			children = (
+				01BF6839238B0EE80073193E /* Storyboards */,
+				01BF6838238B0EC70073193E /* ViewControllers */,
+				01BF6837238B0EBB0073193E /* ModelControllers */,
+				01BF6836238B0EB10073193E /* Model */,
 				01BF68052389E26F0073193E /* AppDelegate.swift */,
 				01BF68072389E26F0073193E /* SceneDelegate.swift */,
-				01BF68092389E26F0073193E /* ViewController.swift */,
-				01BF680B2389E26F0073193E /* Main.storyboard */,
 				01BF680E2389E2700073193E /* Assets.xcassets */,
 				01BF68102389E2700073193E /* LaunchScreen.storyboard */,
 				01BF68132389E2700073193E /* Info.plist */,
@@ -143,6 +151,39 @@
 				01BF68292389E2710073193E /* Info.plist */,
 			);
 			path = FoodieFinderUITests;
+			sourceTree = "<group>";
+		};
+		01BF6836238B0EB10073193E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		01BF6837238B0EBB0073193E /* ModelControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ModelControllers;
+			sourceTree = "<group>";
+		};
+		01BF6838238B0EC70073193E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				01BF683A238B0FC30073193E /* RestaurantViewController.swift */,
+				01BF6840238B127E0073193E /* InternetViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		01BF6839238B0EE80073193E /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				01BF6842238B14F90073193E /* Main.storyboard */,
+				01BF683C238B10CF0073193E /* Restaurant.storyboard */,
+				01BF683E238B120A0073193E /* Internet.storyboard */,
+			);
+			path = Storyboards;
 			sourceTree = "<group>";
 		};
 		A4B4530F97D3007BCF1DD8C7 /* Frameworks */ = {
@@ -276,9 +317,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				01BF683F238B120A0073193E /* Internet.storyboard in Resources */,
+				01BF6843238B14F90073193E /* Main.storyboard in Resources */,
 				01BF68122389E2700073193E /* LaunchScreen.storyboard in Resources */,
+				01BF683D238B10CF0073193E /* Restaurant.storyboard in Resources */,
 				01BF680F2389E2700073193E /* Assets.xcassets in Resources */,
-				01BF680D2389E26F0073193E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -389,9 +432,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01BF680A2389E26F0073193E /* ViewController.swift in Sources */,
+				01BF683B238B0FC30073193E /* RestaurantViewController.swift in Sources */,
 				01BF68062389E26F0073193E /* AppDelegate.swift in Sources */,
 				01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */,
+				01BF6841238B127E0073193E /* InternetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -427,14 +471,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		01BF680B2389E26F0073193E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				01BF680C2389E26F0073193E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		01BF68102389E2700073193E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
