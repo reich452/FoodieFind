@@ -12,11 +12,18 @@ class RestaurantInfoTableViewCell: UITableViewCell {
     @IBOutlet private weak var addressLabel: UILabel!
     @IBOutlet private weak var phoneLabel: UILabel!
     @IBOutlet private weak var twitterLabel: UILabel!
-    
     @IBOutlet private weak var facebookLabel: UILabel!
-    @IBOutlet private weak var facebookNameLabel: UILabel!
     
-    static var defaultReuseIdentifier: String {
+    func configureCell(restaurant: Restaurant) {
+        addressLabel.text = restaurant.location.addressInfo
+        if let contact = restaurant.contact {
+            phoneLabel.text = contact.formattedPhone
+            twitterLabel.text = contact.twitterFormat
+            facebookLabel.text = contact.facebookFormat
+        }
+    }
+    
+    static var cellID: String {
         return String(describing: self)
     }
 }

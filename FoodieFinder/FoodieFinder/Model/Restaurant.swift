@@ -29,6 +29,14 @@ struct Contact: Codable, Equatable {
     let facebook: String?
     let facebookUsername: String?
     let facebookName: String?
+    
+    var twitterFormat: String {
+        "@\(twitter ??? "")"
+    }
+    
+    var facebookFormat: String {
+        "Facebook \(facebookName ??? "")"
+    }
 }
 
 struct Location: Codable, Equatable {
@@ -43,6 +51,10 @@ struct Location: Codable, Equatable {
     let state: String
     let country: String
     let formattedAddress: [String]
+    
+    var addressInfo: String {
+        formattedAddress.joined(separator: ", ")
+    }
     
     private enum CodingKeys: String, CodingKey {
         case address

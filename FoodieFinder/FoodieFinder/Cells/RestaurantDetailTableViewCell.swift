@@ -9,16 +9,16 @@
 import UIKit
 
 class RestaurantDetailTableViewCell: UITableViewCell {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var catagoryLabel: UILabel!
+    
+    func configureCell(restaurant: Restaurant) {
+        nameLabel.text = restaurant.name
+        catagoryLabel.text = restaurant.category
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    static var cellID: String {
+        return String(describing: self)
     }
-
 }

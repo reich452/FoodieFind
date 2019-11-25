@@ -68,8 +68,8 @@ custom_rules:
     severity: error # violation severity. optional.
 
 # Rule configuration
-line_length: 270
-warning: 270
+line_length: 300
+warning: 300
 ignores_function_declarations: true
 ignores_comments: true
 ignores_interpolated_strings: true
