@@ -48,7 +48,6 @@ opt_in_rules:
   - strict_fileprivate
   - switch_case_on_newline
   - trailing_closure
-  - unavailable_function
   - unneeded_parentheses_in_closure_argument
   - unowned_variable_capture
   - untyped_error_in_catch
@@ -69,8 +68,8 @@ custom_rules:
     severity: error # violation severity. optional.
 
 # Rule configuration
-line_length: 240
-warning: 240
+line_length: 270
+warning: 270
 ignores_function_declarations: true
 ignores_comments: true
 ignores_interpolated_strings: true

@@ -26,6 +26,7 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
         
         collectionView.collectionViewLayout = self.collectionViewFlowLayout
         collectionView.dataSource = self
+        collectionView.delegate = self
         collectionView.prefetchDataSource = self
         loadRestarunts()
     }
@@ -45,20 +46,19 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
             }
         }
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func showRestaurant(_ restaurant: Restaurant) {
+        let stoyboard = UIStoryboard(name: "RestaurantDetail", bundle: nil)
+        let detailVC = stoyboard.instantiateViewController(identifier: "RestaurantDetailViewController") { coder in
+          RestaurantDetailViewController(coder: coder, restaurant: restaurant)
+        }
+        navigationController?.pushViewController(detailVC, animated: true)
     }
-    */
 }
 
 extension RestaurantViewController: UICollectionViewDataSource {
     
-    // MARK: - Data Source 
+    // MARK: - Data Source
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return restaurants.count
     }
@@ -71,6 +71,16 @@ extension RestaurantViewController: UICollectionViewDataSource {
         cell.configure(restaurant: restaurant)
         
         return cell
+    }
+}
+
+extension RestaurantViewController: UICollectionViewDelegate {
+    
+    // MARK: - Delegate
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let restaurant = restaurants[indexPath.row]
+        showRestaurant(restaurant)
     }
 }
 

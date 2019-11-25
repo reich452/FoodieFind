@@ -1,5 +1,5 @@
 //
-//  CollectionViewFlowLayout.swift
+//  CustomCollectionViewFlowLayout.swift
 //  FoodieFinder
 //
 //  Created by Nick Reichard on 11/24/19.

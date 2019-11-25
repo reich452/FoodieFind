@@ -9,7 +9,7 @@
 @testable import FoodieFinder
 import XCTest
 
-private let mocLocation = Location(address: "5100 Belt Line Road, STE 502", crossStreet: "Dallas North Tollway", lat: 32.950787, lng: -96.821118, postalCode: "75254", countryCode: "US", city: "Addison", state: "TX", country: "United States", formattedAddress: [
+private let mocLocation = Location(address: "5100 Belt Line Road, STE 502", crossStreet: "Dallas North Tollway", lat: 32.950_787, lng: -96.821_118, postalCode: "75254", countryCode: "US", city: "Addison", state: "TX", country: "United States", formattedAddress: [
     "5100 Belt Line Road, STE 502 (Dallas North Tollway)",
     "Addison, TX 75254",
     "United States"])

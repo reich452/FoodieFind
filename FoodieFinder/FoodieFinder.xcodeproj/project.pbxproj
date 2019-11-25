@@ -24,8 +24,10 @@
 		014F1A24238B8D9900D0D502 /* ActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A23238B8D9900D0D502 /* ActivityIndicatorPresenter.swift */; };
 		014F1A27238B8EF600D0D502 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A26238B8EF600D0D502 /* UIViewController+Extention.swift */; };
 		014F1A29238B932000D0D502 /* UIImageView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A28238B932000D0D502 /* UIImageView+Extention.swift */; };
-		014F1A2B238B983000D0D502 /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A2A238B983000D0D502 /* CollectionViewFlowLayout.swift */; };
+		014F1A2B238B983000D0D502 /* CustomCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A2A238B983000D0D502 /* CustomCollectionViewFlowLayout.swift */; };
 		014F1A2D238BAA3900D0D502 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A2C238BAA3900D0D502 /* AsyncImageView.swift */; };
+		014F1A2F238C49AB00D0D502 /* RestaurantDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014F1A2E238C49AB00D0D502 /* RestaurantDetail.storyboard */; };
+		014F1A31238C4B8B00D0D502 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A30238C4B8B00D0D502 /* RestaurantDetailViewController.swift */; };
 		01BF68062389E26F0073193E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68052389E26F0073193E /* AppDelegate.swift */; };
 		01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68072389E26F0073193E /* SceneDelegate.swift */; };
 		01BF680F2389E2700073193E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BF680E2389E2700073193E /* Assets.xcassets */; };
@@ -77,8 +79,10 @@
 		014F1A23238B8D9900D0D502 /* ActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
 		014F1A26238B8EF600D0D502 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
 		014F1A28238B932000D0D502 /* UIImageView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extention.swift"; sourceTree = "<group>"; };
-		014F1A2A238B983000D0D502 /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		014F1A2A238B983000D0D502 /* CustomCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		014F1A2C238BAA3900D0D502 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
+		014F1A2E238C49AB00D0D502 /* RestaurantDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RestaurantDetail.storyboard; sourceTree = "<group>"; };
+		014F1A30238C4B8B00D0D502 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
 		01BF68022389E26F0073193E /* FoodieFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodieFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BF68052389E26F0073193E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01BF68072389E26F0073193E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -211,7 +215,7 @@
 			isa = PBXGroup;
 			children = (
 				014F1A23238B8D9900D0D502 /* ActivityIndicatorPresenter.swift */,
-				014F1A2A238B983000D0D502 /* CollectionViewFlowLayout.swift */,
+				014F1A2A238B983000D0D502 /* CustomCollectionViewFlowLayout.swift */,
 				014F1A2C238BAA3900D0D502 /* AsyncImageView.swift */,
 			);
 			path = Infastructure;
@@ -308,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				01BF683A238B0FC30073193E /* RestaurantViewController.swift */,
+				014F1A30238C4B8B00D0D502 /* RestaurantDetailViewController.swift */,
 				01BF6840238B127E0073193E /* InternetViewController.swift */,
 			);
 			path = ViewControllers;
@@ -318,6 +323,7 @@
 			children = (
 				01BF6842238B14F90073193E /* Main.storyboard */,
 				01BF683C238B10CF0073193E /* Restaurant.storyboard */,
+				014F1A2E238C49AB00D0D502 /* RestaurantDetail.storyboard */,
 				01BF683E238B120A0073193E /* Internet.storyboard */,
 			);
 			path = Storyboards;
@@ -458,6 +464,7 @@
 				01BF6843238B14F90073193E /* Main.storyboard in Resources */,
 				01BF68122389E2700073193E /* LaunchScreen.storyboard in Resources */,
 				01BF683D238B10CF0073193E /* Restaurant.storyboard in Resources */,
+				014F1A2F238C49AB00D0D502 /* RestaurantDetail.storyboard in Resources */,
 				01BF680F2389E2700073193E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -586,9 +593,10 @@
 				014F1A24238B8D9900D0D502 /* ActivityIndicatorPresenter.swift in Sources */,
 				014F1A1C238B574000D0D502 /* RestaurantController.swift in Sources */,
 				014F1A12238B453A00D0D502 /* ServiceProtocol.swift in Sources */,
-				014F1A2B238B983000D0D502 /* CollectionViewFlowLayout.swift in Sources */,
+				014F1A2B238B983000D0D502 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */,
 				014F1A14238B456E00D0D502 /* HTTPMethod.swift in Sources */,
+				014F1A31238C4B8B00D0D502 /* RestaurantDetailViewController.swift in Sources */,
 				01BF6841238B127E0073193E /* InternetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

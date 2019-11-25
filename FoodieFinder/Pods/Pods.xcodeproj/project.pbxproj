@@ -15,6 +15,7 @@
 			dependencies = (
 			);
 			name = SwiftLint;
+			productName = SwiftLint;
 		};
 /* End PBXAggregateTarget section */
 
@@ -61,7 +62,7 @@
 		1632B42935AF174AC75128FC31672BA4 /* Pods-FoodieFinderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodieFinderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		196C632433F70B38BC2EE3E750E94C1D /* Pods-FoodieFinder.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FoodieFinder.modulemap"; sourceTree = "<group>"; };
 		2FF6232C59376D58682E9C2D4FEF8610 /* Pods-FoodieFinder-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodieFinder-Info.plist"; sourceTree = "<group>"; };
-		307DE683052634DBA2FBF5ADC767F418 /* Pods_FoodieFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodieFinderTests.framework; path = "Pods-FoodieFinderTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		307DE683052634DBA2FBF5ADC767F418 /* Pods_FoodieFinderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodieFinderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		369046CA1FC699278377DE935C02EE81 /* Pods-FoodieFinderTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodieFinderTests-Info.plist"; sourceTree = "<group>"; };
 		473D642E24957BF53F03BCA61383995F /* Pods-FoodieFinder-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FoodieFinder-umbrella.h"; sourceTree = "<group>"; };
@@ -75,11 +76,11 @@
 		89F85ACF3D78B39506B75103B4694B36 /* SwiftLint.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftLint.xcconfig; sourceTree = "<group>"; };
 		8F9C5989CB5223AE1B8DF9EB276A39E9 /* Pods-FoodieFinderTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodieFinderTests-dummy.m"; sourceTree = "<group>"; };
 		9B04AF32D556B872F25CB768DC50EBC7 /* Pods-FoodieFinderUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FoodieFinderUITests-acknowledgements.plist"; sourceTree = "<group>"; };
-		9D1701F48531F55E01990EDB379E4E4B /* Pods_FoodieFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodieFinder.framework; path = "Pods-FoodieFinder.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D1701F48531F55E01990EDB379E4E4B /* Pods_FoodieFinder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodieFinder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A3C0DDE5D7F21C9E40B5DB1399C1CCDE /* Pods-FoodieFinder-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodieFinder-dummy.m"; sourceTree = "<group>"; };
 		A4D195311201CF3CFC101CFD2FDF1809 /* Pods-FoodieFinderTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FoodieFinderTests.modulemap"; sourceTree = "<group>"; };
-		AC72E72BA2D79E9ECF96298994260AB4 /* Pods_FoodieFinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FoodieFinderUITests.framework; path = "Pods-FoodieFinderUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AC72E72BA2D79E9ECF96298994260AB4 /* Pods_FoodieFinderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodieFinderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADF4F27AA0F8C37E38A21DE521EA3A18 /* Pods-FoodieFinderUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-FoodieFinderUITests.modulemap"; sourceTree = "<group>"; };
 		C1B99D7939FA14210906D29AD8FDCAA2 /* Pods-FoodieFinder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FoodieFinder.debug.xcconfig"; sourceTree = "<group>"; };
 		C476385F874234C7BECBAAAEE36EB348 /* Pods-FoodieFinderUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FoodieFinderUITests-dummy.m"; sourceTree = "<group>"; };
@@ -164,7 +165,6 @@
 			children = (
 				EEA599FE5C15138FF0981CCFB01E55AA /* Support Files */,
 			);
-			name = SwiftLint;
 			path = SwiftLint;
 			sourceTree = "<group>";
 		};
@@ -338,6 +338,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
 			productRefGroup = 7F8F0DF56A1DD3F63FC2238D817BB587 /* Products */;

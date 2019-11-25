@@ -7,7 +7,8 @@
 //
 
 import Foundation
-final class NetworkLogger {
+
+enum NetworkLogger {
     static func log(request: URLRequest) {
         
         print("\n - - - - - - - - - - OUTGOING - - - - - - - - - - \n")
@@ -26,7 +27,7 @@ final class NetworkLogger {
         \(method) \(path)?\(query) HTTP/2 \n
         HOST: \(host)\n
         """
-        for (key,value) in request.allHTTPHeaderFields ?? [:] {
+        for (key, value) in request.allHTTPHeaderFields ?? [:] {
             logOutput += "\(key): \(value) \n"
         }
         if let body = request.httpBody {
