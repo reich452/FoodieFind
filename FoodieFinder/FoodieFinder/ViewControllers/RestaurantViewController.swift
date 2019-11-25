@@ -57,6 +57,8 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
 }
 
 extension RestaurantViewController: UICollectionViewDataSource {
+    
+    // MARK: - Data Source 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return restaurants.count
     }
@@ -73,6 +75,8 @@ extension RestaurantViewController: UICollectionViewDataSource {
 }
 
 extension RestaurantViewController: UICollectionViewDataSourcePrefetching {
+    
+    // MARK: - PreFetch
     func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
         
         for indexPath in indexPaths {

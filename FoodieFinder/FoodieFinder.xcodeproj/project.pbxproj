@@ -25,6 +25,7 @@
 		014F1A27238B8EF600D0D502 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A26238B8EF600D0D502 /* UIViewController+Extention.swift */; };
 		014F1A29238B932000D0D502 /* UIImageView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A28238B932000D0D502 /* UIImageView+Extention.swift */; };
 		014F1A2B238B983000D0D502 /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A2A238B983000D0D502 /* CollectionViewFlowLayout.swift */; };
+		014F1A2D238BAA3900D0D502 /* AsyncImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A2C238BAA3900D0D502 /* AsyncImageView.swift */; };
 		01BF68062389E26F0073193E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68052389E26F0073193E /* AppDelegate.swift */; };
 		01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68072389E26F0073193E /* SceneDelegate.swift */; };
 		01BF680F2389E2700073193E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BF680E2389E2700073193E /* Assets.xcassets */; };
@@ -77,6 +78,7 @@
 		014F1A26238B8EF600D0D502 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
 		014F1A28238B932000D0D502 /* UIImageView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extention.swift"; sourceTree = "<group>"; };
 		014F1A2A238B983000D0D502 /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		014F1A2C238BAA3900D0D502 /* AsyncImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AsyncImageView.swift; sourceTree = "<group>"; };
 		01BF68022389E26F0073193E /* FoodieFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodieFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BF68052389E26F0073193E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01BF68072389E26F0073193E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 			children = (
 				014F1A23238B8D9900D0D502 /* ActivityIndicatorPresenter.swift */,
 				014F1A2A238B983000D0D502 /* CollectionViewFlowLayout.swift */,
+				014F1A2C238BAA3900D0D502 /* AsyncImageView.swift */,
 			);
 			path = Infastructure;
 			sourceTree = "<group>";
@@ -570,6 +573,7 @@
 				014F1A20238B5F4200D0D502 /* NetworkLogger.swift in Sources */,
 				014F1A17238B48C500D0D502 /* Router.swift in Sources */,
 				014F1A1E238B5DF100D0D502 /* NetworkError.swift in Sources */,
+				014F1A2D238BAA3900D0D502 /* AsyncImageView.swift in Sources */,
 				014F1A27238B8EF600D0D502 /* UIViewController+Extention.swift in Sources */,
 				01BF683B238B0FC30073193E /* RestaurantViewController.swift in Sources */,
 				014F1A00238B32B500D0D502 /* RestaurantCollectionViewCell.swift in Sources */,
