@@ -17,7 +17,7 @@ final class RestaurantController {
     private let service = Router<RestaurantEndPoint>()
     
     func getRestaurants(completion: @escaping (Result<[Restaurant], Error>) -> Void) {
-     
+        
         service.load(service: .fetchRestaurants, decodeType: RestaurantsJSON.self) { result in
             switch result {
             case .failure(let error):

@@ -16,17 +16,33 @@ public protocol NetworkRouter: class {
 
 public class Router<T: ServiceProtocol>: NetworkRouter {
     
+    // MARK: - Properties
+    
     private let session: URLSession
     private var task: URLSessionTask?
     
-    init(session: URLSession = URLSession(configuration: .default)) {
-        self.session = session
+    // MARK: - Init
+    
+    init(configuration: URLSessionConfiguration) {
+        self.session = URLSession(configuration: configuration)
     }
     
+    public convenience init() {
+        self.init(configuration: .default)
+    }
+    
+    // MARK: - Load
+    /// Completes with the Result<Type, Error> on the main thread.
     public func load(service: T, completion: @escaping (Result<Data, Error>) -> Void) {
         call(service.urlRequest, completion: completion)
     }
     
+    /// Decodes Type. Completes with the Result<Type, Error> on the main thread.
+    ///
+    /// - Parameters:
+    ///     - service: The *Endpoint* for the NetowrkRequest API.
+    ///     - decodeType: Type that conforms to Decodable.
+    ///     - completion: Completes Result<Type, Error>.
     public func load<U>(service: T, decodeType: U.Type, completion: @escaping (Result<U, Error>) -> Void) where U: Decodable {
         call(service.urlRequest) { result in
             switch result {
@@ -60,7 +76,7 @@ public class Router<T: ServiceProtocol>: NetworkRouter {
             if let response = response {
                 NetworkLogger.log(response: response)
             }
-          
+            
             if let data = data {
                 deliverQueue.async {
                     completion(.success(data))

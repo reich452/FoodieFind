@@ -8,10 +8,11 @@
 
 import UIKit
 
-class RestaurantViewController: UIViewController {
-
+class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
+    
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    var activityIndicator = UIActivityIndicatorView()
     var restaurants: [Restaurant] = []
     
     override func viewDidLoad() {
@@ -21,15 +22,18 @@ class RestaurantViewController: UIViewController {
         loadRestarunts()
     }
     
-    func loadRestarunts() {
+    private func loadRestarunts() {
         let restController = RestaurantController.shared
+        showActivityIndicator()
         restController.getRestaurants { [weak self] result in
             switch result {
             case .success(let restaurants):
                 self?.restaurants = restaurants
+                self?.hideActivityIndicator()
                 self?.collectionView.reloadData()
             case .failure(let error):
-                print(error)
+                self?.hideActivityIndicator()
+                self?.showNoActionAlert(titleStr: "Error Loading Restaurants", messageStr: error.localizedDescription, style: .cancel)
             }
         }
     }
