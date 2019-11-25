@@ -14,6 +14,10 @@
 		014F1A09238B3C0700D0D502 /* NewJSONDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A08238B3C0700D0D502 /* NewJSONDecoder.swift */; };
 		014F1A0B238B3C2900D0D502 /* NewJSONEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A0A238B3C2900D0D502 /* NewJSONEncoder.swift */; };
 		014F1A0E238B3FB000D0D502 /* XCTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A0D238B3FB000D0D502 /* XCTestCase.swift */; };
+		014F1A12238B453A00D0D502 /* ServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A11238B453A00D0D502 /* ServiceProtocol.swift */; };
+		014F1A14238B456E00D0D502 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A13238B456E00D0D502 /* HTTPMethod.swift */; };
+		014F1A17238B48C500D0D502 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A16238B48C500D0D502 /* Router.swift */; };
+		014F1A1A238B538100D0D502 /* RestaurantEndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A19238B538100D0D502 /* RestaurantEndPoint.swift */; };
 		01BF68062389E26F0073193E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68052389E26F0073193E /* AppDelegate.swift */; };
 		01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68072389E26F0073193E /* SceneDelegate.swift */; };
 		01BF680F2389E2700073193E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BF680E2389E2700073193E /* Assets.xcassets */; };
@@ -55,6 +59,10 @@
 		014F1A08238B3C0700D0D502 /* NewJSONDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJSONDecoder.swift; sourceTree = "<group>"; };
 		014F1A0A238B3C2900D0D502 /* NewJSONEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewJSONEncoder.swift; sourceTree = "<group>"; };
 		014F1A0D238B3FB000D0D502 /* XCTestCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCase.swift; sourceTree = "<group>"; };
+		014F1A11238B453A00D0D502 /* ServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceProtocol.swift; sourceTree = "<group>"; };
+		014F1A13238B456E00D0D502 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		014F1A16238B48C500D0D502 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		014F1A19238B538100D0D502 /* RestaurantEndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantEndPoint.swift; sourceTree = "<group>"; };
 		01BF68022389E26F0073193E /* FoodieFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodieFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BF68052389E26F0073193E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01BF68072389E26F0073193E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,6 +130,8 @@
 		014F1A07238B3BC000D0D502 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				014F1A18238B532000D0D502 /* EndPoint */,
+				014F1A15238B458200D0D502 /* Service */,
 				014F1A08238B3C0700D0D502 /* NewJSONDecoder.swift */,
 				014F1A0A238B3C2900D0D502 /* NewJSONEncoder.swift */,
 			);
@@ -142,6 +152,32 @@
 				014F1A03238B3B5A00D0D502 /* SampleRestaurants.json */,
 			);
 			path = Stub;
+			sourceTree = "<group>";
+		};
+		014F1A10238B44E900D0D502 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				014F1A05238B3B9E00D0D502 /* RestaurantTest.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		014F1A15238B458200D0D502 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				014F1A13238B456E00D0D502 /* HTTPMethod.swift */,
+				014F1A11238B453A00D0D502 /* ServiceProtocol.swift */,
+				014F1A16238B48C500D0D502 /* Router.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		014F1A18238B532000D0D502 /* EndPoint */ = {
+			isa = PBXGroup;
+			children = (
+				014F1A19238B538100D0D502 /* RestaurantEndPoint.swift */,
+			);
+			path = EndPoint;
 			sourceTree = "<group>";
 		};
 		01BF67F92389E26E0073193E = {
@@ -187,11 +223,11 @@
 		01BF681B2389E2710073193E /* FoodieFinderTests */ = {
 			isa = PBXGroup;
 			children = (
+				014F1A10238B44E900D0D502 /* Model */,
 				014F1A0F238B426200D0D502 /* Stub */,
 				014F1A0C238B3F9A00D0D502 /* Extentions */,
 				01BF681C2389E2710073193E /* FoodieFinderTests.swift */,
 				01BF681E2389E2710073193E /* Info.plist */,
-				014F1A05238B3B9E00D0D502 /* RestaurantTest.swift */,
 			);
 			path = FoodieFinderTests;
 			sourceTree = "<group>";
@@ -486,13 +522,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				014F1A17238B48C500D0D502 /* Router.swift in Sources */,
 				01BF683B238B0FC30073193E /* RestaurantViewController.swift in Sources */,
 				014F1A00238B32B500D0D502 /* RestaurantCollectionViewCell.swift in Sources */,
 				014F1A02238B37DD00D0D502 /* Restaurant.swift in Sources */,
 				014F1A0B238B3C2900D0D502 /* NewJSONEncoder.swift in Sources */,
+				014F1A1A238B538100D0D502 /* RestaurantEndPoint.swift in Sources */,
 				01BF68062389E26F0073193E /* AppDelegate.swift in Sources */,
 				014F1A09238B3C0700D0D502 /* NewJSONDecoder.swift in Sources */,
+				014F1A12238B453A00D0D502 /* ServiceProtocol.swift in Sources */,
 				01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */,
+				014F1A14238B456E00D0D502 /* HTTPMethod.swift in Sources */,
 				01BF6841238B127E0073193E /* InternetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

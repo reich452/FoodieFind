@@ -8,6 +8,7 @@
 
 import Foundation
 
+/// JSONDecoder & JSONEncoder
 typealias NewJSONCoder = NewJSONEncoder & NewJSONDecoder
 
 protocol NewJSONDecoder {
