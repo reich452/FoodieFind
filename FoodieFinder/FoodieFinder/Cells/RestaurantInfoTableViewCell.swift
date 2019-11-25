@@ -8,11 +8,15 @@
 
 import UIKit
 
-class RestaurantInfoCollectionViewCell: UICollectionViewCell {
+class RestaurantInfoTableViewCell: UITableViewCell {
     @IBOutlet private weak var addressLabel: UILabel!
     @IBOutlet private weak var phoneLabel: UILabel!
     @IBOutlet private weak var twitterLabel: UILabel!
     
     @IBOutlet private weak var facebookLabel: UILabel!
     @IBOutlet private weak var facebookNameLabel: UILabel!
+    
+    static var defaultReuseIdentifier: String {
+        return String(describing: self)
+    }
 }
