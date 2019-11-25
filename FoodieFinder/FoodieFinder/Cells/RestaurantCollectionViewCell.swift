@@ -10,7 +10,7 @@ import UIKit
 
 class RestaurantCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet private weak var itemImageView: UIImageView!
+    @IBOutlet private weak var itemImageView: AsyncImageView!
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var typeLabel: UILabel!
     
@@ -21,6 +21,11 @@ class RestaurantCollectionViewCell: UICollectionViewCell {
             itemImageView.image = #imageLiteral(resourceName: "cellGradientBackground")
             return
         }
-        itemImageView.setImage(from: imageURL, withPlaceholder: #imageLiteral(resourceName: "cellGradientBackground"))
+        UIView.transition(with: contentView,
+                          duration: 0.2,
+                          options: .transitionCrossDissolve,
+                          animations: {
+            self.itemImageView.setNewImage(from: imageURL, withPlaceholder: #imageLiteral(resourceName: "cellGradientBackground"))
+        }, completion: nil)
     }
 }

@@ -16,7 +16,6 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
     var restaurants: [Restaurant] = []
     
     private lazy var collectionViewFlowLayout: CustomCollectionViewFlowLayout = {
-        
         let layout = CustomCollectionViewFlowLayout(itemWith: view.frame.width, itemHeight: 180, lineSpace: 0, interItemSpace: 0)
         layout.display = .list
         return layout
@@ -25,8 +24,9 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.dataSource = self
         collectionView.collectionViewLayout = self.collectionViewFlowLayout
+        collectionView.dataSource = self
+        collectionView.prefetchDataSource = self
         loadRestarunts()
     }
     
@@ -69,5 +69,16 @@ extension RestaurantViewController: UICollectionViewDataSource {
         cell.configure(restaurant: restaurant)
         
         return cell
+    }
+}
+
+extension RestaurantViewController: UICollectionViewDataSourcePrefetching {
+    func collectionView(_ collectionView: UICollectionView, prefetchItemsAt indexPaths: [IndexPath]) {
+        
+        for indexPath in indexPaths {
+            let restaurant = restaurants[indexPath.row]
+            guard let imageUrl = restaurant.backgroundImageURL else { return }
+            URLSession.shared.dataTask(with: imageUrl).resume()
+        }
     }
 }
