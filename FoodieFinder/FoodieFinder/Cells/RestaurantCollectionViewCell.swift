@@ -10,8 +10,13 @@ import UIKit
 
 class RestaurantCollectionViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var itemImageView: UIImageView!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet private weak var itemImageView: UIImageView!
+    @IBOutlet private weak var nameLabel: UILabel!
+    @IBOutlet private weak var typeLabel: UILabel!
     
+    
+    func configure(restaurant: Restaurant) {
+        nameLabel.text = restaurant.name
+        typeLabel.text = restaurant.category
+    }
 }

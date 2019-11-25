@@ -12,10 +12,26 @@ class RestaurantViewController: UIViewController {
 
     @IBOutlet private weak var collectionView: UICollectionView!
     
+    var restaurants: [Restaurant] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.dataSource = self
+        loadRestarunts()
+    }
+    
+    func loadRestarunts() {
+        let restController = RestaurantController.shared
+        restController.getRestaurants { [weak self] result in
+            switch result {
+            case .success(let restaurants):
+                self?.restaurants = restaurants
+                self?.collectionView.reloadData()
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
     /*
     // MARK: - Navigation
@@ -30,12 +46,15 @@ class RestaurantViewController: UIViewController {
 
 extension RestaurantViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1
+        return restaurants.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as? RestaurantCollectionViewCell else { return UICollectionViewCell() }
+        
+        let restaurant = restaurants[indexPath.row]
+        cell.configure(restaurant: restaurant)
         
         return cell
     }

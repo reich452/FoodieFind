@@ -36,7 +36,7 @@ public class Router<T: ServiceProtocol>: NetworkRouter {
                     let resp = try decoder.decode(decodeType, from: data)
                     completion(.success(resp))
                 } catch {
-                    completion(.failure(error))
+                    completion(.failure(NetworkError.dataNotDecodable))
                 }
             case .failure(let error):
                 completion(.failure(error))
@@ -48,14 +48,19 @@ public class Router<T: ServiceProtocol>: NetworkRouter {
     }
     
     // MARK: - Private
+    
+    /// Performs a URLRequest with an async dataTask on a brackGround thread and completes on the main thread 
     private func call(_ request: URLRequest, deliverQueue: DispatchQueue = DispatchQueue.main, completion: @escaping (Result<Data, Error>) -> Void) {
-        let newTask = session.dataTask(with: request) { data, _, error in
+        let newTask = session.dataTask(with: request) { data, response, error in
             if let error = error {
                 deliverQueue.async {
                     completion(.failure(error))
                 }
             }
-            
+            if let response = response {
+                NetworkLogger.log(response: response)
+            }
+          
             if let data = data {
                 deliverQueue.async {
                     completion(.success(data))
