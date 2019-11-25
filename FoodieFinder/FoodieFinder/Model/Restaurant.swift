@@ -15,7 +15,7 @@ struct RestaurantsJSON: Codable {
 struct Restaurant: Codable, Equatable {
     
     let name: String
-    let backgroundImageURL: String
+    let backgroundImageURL: URL?
     let category: String
     let contact: Contact?
     let location: Location

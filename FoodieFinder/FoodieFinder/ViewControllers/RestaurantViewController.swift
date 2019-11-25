@@ -15,10 +15,18 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
     var activityIndicator = UIActivityIndicatorView()
     var restaurants: [Restaurant] = []
     
+    private lazy var collectionViewFlowLayout: CustomCollectionViewFlowLayout = {
+        
+        let layout = CustomCollectionViewFlowLayout(itemWith: view.frame.width, itemHeight: 180, lineSpace: 0, interItemSpace: 0)
+        layout.display = .list
+        return layout
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         collectionView.dataSource = self
+        collectionView.collectionViewLayout = self.collectionViewFlowLayout
         loadRestarunts()
     }
     

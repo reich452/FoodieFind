@@ -23,6 +23,8 @@
 		014F1A20238B5F4200D0D502 /* NetworkLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A1F238B5F4200D0D502 /* NetworkLogger.swift */; };
 		014F1A24238B8D9900D0D502 /* ActivityIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A23238B8D9900D0D502 /* ActivityIndicatorPresenter.swift */; };
 		014F1A27238B8EF600D0D502 /* UIViewController+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A26238B8EF600D0D502 /* UIViewController+Extention.swift */; };
+		014F1A29238B932000D0D502 /* UIImageView+Extention.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A28238B932000D0D502 /* UIImageView+Extention.swift */; };
+		014F1A2B238B983000D0D502 /* CollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A2A238B983000D0D502 /* CollectionViewFlowLayout.swift */; };
 		01BF68062389E26F0073193E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68052389E26F0073193E /* AppDelegate.swift */; };
 		01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68072389E26F0073193E /* SceneDelegate.swift */; };
 		01BF680F2389E2700073193E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BF680E2389E2700073193E /* Assets.xcassets */; };
@@ -73,6 +75,8 @@
 		014F1A1F238B5F4200D0D502 /* NetworkLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLogger.swift; sourceTree = "<group>"; };
 		014F1A23238B8D9900D0D502 /* ActivityIndicatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorPresenter.swift; sourceTree = "<group>"; };
 		014F1A26238B8EF600D0D502 /* UIViewController+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extention.swift"; sourceTree = "<group>"; };
+		014F1A28238B932000D0D502 /* UIImageView+Extention.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extention.swift"; sourceTree = "<group>"; };
+		014F1A2A238B983000D0D502 /* CollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewFlowLayout.swift; sourceTree = "<group>"; };
 		01BF68022389E26F0073193E /* FoodieFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodieFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BF68052389E26F0073193E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01BF68072389E26F0073193E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -205,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				014F1A23238B8D9900D0D502 /* ActivityIndicatorPresenter.swift */,
+				014F1A2A238B983000D0D502 /* CollectionViewFlowLayout.swift */,
 			);
 			path = Infastructure;
 			sourceTree = "<group>";
@@ -213,6 +218,7 @@
 			isa = PBXGroup;
 			children = (
 				014F1A26238B8EF600D0D502 /* UIViewController+Extention.swift */,
+				014F1A28238B932000D0D502 /* UIImageView+Extention.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -568,6 +574,7 @@
 				01BF683B238B0FC30073193E /* RestaurantViewController.swift in Sources */,
 				014F1A00238B32B500D0D502 /* RestaurantCollectionViewCell.swift in Sources */,
 				014F1A02238B37DD00D0D502 /* Restaurant.swift in Sources */,
+				014F1A29238B932000D0D502 /* UIImageView+Extention.swift in Sources */,
 				014F1A0B238B3C2900D0D502 /* NewJSONEncoder.swift in Sources */,
 				014F1A1A238B538100D0D502 /* RestaurantEndPoint.swift in Sources */,
 				01BF68062389E26F0073193E /* AppDelegate.swift in Sources */,
@@ -575,6 +582,7 @@
 				014F1A24238B8D9900D0D502 /* ActivityIndicatorPresenter.swift in Sources */,
 				014F1A1C238B574000D0D502 /* RestaurantController.swift in Sources */,
 				014F1A12238B453A00D0D502 /* ServiceProtocol.swift in Sources */,
+				014F1A2B238B983000D0D502 /* CollectionViewFlowLayout.swift in Sources */,
 				01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */,
 				014F1A14238B456E00D0D502 /* HTTPMethod.swift in Sources */,
 				01BF6841238B127E0073193E /* InternetViewController.swift in Sources */,

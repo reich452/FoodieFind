@@ -14,9 +14,13 @@ class RestaurantCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var nameLabel: UILabel!
     @IBOutlet private weak var typeLabel: UILabel!
     
-    
     func configure(restaurant: Restaurant) {
         nameLabel.text = restaurant.name
         typeLabel.text = restaurant.category
+        guard let imageURL = restaurant.backgroundImageURL else {
+            itemImageView.image = #imageLiteral(resourceName: "cellGradientBackground")
+            return
+        }
+        itemImageView.setImage(from: imageURL, withPlaceholder: #imageLiteral(resourceName: "cellGradientBackground"))
     }
 }
