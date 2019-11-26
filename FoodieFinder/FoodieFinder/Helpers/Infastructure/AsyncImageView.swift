@@ -8,6 +8,7 @@
 
 import UIKit
 
+/// UIImageView subclass. Fetches an image async and replaces the placeholder on the main thread 
 class AsyncImageView: UIImageView, ActivityIndicatorPresenter {
     var activityIndicator = UIActivityIndicatorView()
     

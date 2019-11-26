@@ -9,15 +9,17 @@
 import MapKit
 import UIKit
 
-class RestaurantDetailViewController: UIViewController {
+class RestaurantDetailViewController: UIViewController, MapRegionGenerator {
     
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var mapView: MKMapView!
     // MARK: - Properties
     var restaurant: Restaurant
+    var locationCoordinate: CLLocationCoordinate2D?
+    var mapKitView = MKMapView()
     
     // MARK: - Init
-    
+
     /// Dependency injection: must pass in a restaurant to init this class
     init?(coder: NSCoder, restaurant: Restaurant) {
         self.restaurant = restaurant
@@ -32,9 +34,12 @@ class RestaurantDetailViewController: UIViewController {
         super.viewDidLoad()
         
         title = restaurant.name
+        mapKitView = mapView
         tableView.dataSource = self
         tableView.delegate = self
         tableView.tableFooterView = UIView()
+        setUpRegion(lat: restaurant.location.lat, lng: restaurant.location.lng)
+        addAnnotation(with: restaurant.name, subtitle: restaurant.category)
     }
 }
 
