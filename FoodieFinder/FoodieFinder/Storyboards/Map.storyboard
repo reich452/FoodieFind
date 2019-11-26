@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="F27-gV-WM1">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Map View Controller-->
+        <scene sceneID="mVK-6E-Mmk">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="F27-gV-WM1" customClass="MapViewController" customModule="FoodieFinder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MsW-Mu-48o">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="7BK-7G-PYh">
+                                <rect key="frame" x="0.0" y="108" width="414" height="788"/>
+                            </mapView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HhE-IO-XOs" customClass="CardView" customModule="FoodieFinder" customModuleProvider="target">
+                                <rect key="frame" x="145" y="68" width="124" height="7"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="7" id="Kqe-5e-qwo"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.26274509800000001" green="0.90980392160000001" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="7BK-7G-PYh" firstAttribute="top" secondItem="uB5-gG-R9v" secondAttribute="top" constant="64" id="NK9-5o-wG5"/>
+                            <constraint firstItem="HhE-IO-XOs" firstAttribute="width" secondItem="MsW-Mu-48o" secondAttribute="width" multiplier="0.3" id="VcM-U9-uhh"/>
+                            <constraint firstItem="uB5-gG-R9v" firstAttribute="trailing" secondItem="7BK-7G-PYh" secondAttribute="trailing" id="Xbr-7U-AWh"/>
+                            <constraint firstItem="7BK-7G-PYh" firstAttribute="leading" secondItem="uB5-gG-R9v" secondAttribute="leading" id="b2A-jm-gCa"/>
+                            <constraint firstItem="HhE-IO-XOs" firstAttribute="centerX" secondItem="uB5-gG-R9v" secondAttribute="centerX" id="gcr-nj-qES"/>
+                            <constraint firstItem="HhE-IO-XOs" firstAttribute="top" secondItem="uB5-gG-R9v" secondAttribute="top" constant="24" id="tUr-lg-nz0"/>
+                            <constraint firstAttribute="bottom" secondItem="7BK-7G-PYh" secondAttribute="bottom" id="wPa-qp-3CG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="uB5-gG-R9v"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="7BK-7G-PYh" id="E8p-kk-Uaw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UNO-H5-V0k" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-10.144927536231885" y="-789.50892857142856"/>
+        </scene>
+    </scenes>
+</document>

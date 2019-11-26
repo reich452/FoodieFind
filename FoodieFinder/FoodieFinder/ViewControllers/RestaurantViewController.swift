@@ -37,10 +37,17 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
         super.viewWillLayoutSubviews()
         self.reloadCollectionViewLayout(self.view.bounds.size.width)
     }
+    // MARK: - Actions
     
-    @IBAction func viewMapBtnTapped(_ sender: Any) {
-        
+    @IBAction private func viewMapBtnTapped(_ sender: Any) {
+        let stoyboard = UIStoryboard(name: "Map", bundle: nil)
+        let detailVC = stoyboard.instantiateViewController(identifier: "MapViewController") { [weak self] coder in
+            guard let self = self else { return nil }
+           return MapViewController(coder: coder, restaurants: self.restaurants)
+        }
+        navigationController?.present(detailVC, animated: true)
     }
+    
     // MARK: - Main
     
     private func reloadCollectionViewLayout(_ width: CGFloat) {
@@ -72,7 +79,7 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
     
     // MARK: - Navigation
     
-    func showRestaurant(_ restaurant: Restaurant) {
+    func pushTo(_ restaurant: Restaurant) {
         let stoyboard = UIStoryboard(name: "RestaurantDetail", bundle: nil)
         let detailVC = stoyboard.instantiateViewController(identifier: "RestaurantDetailViewController") { coder in
             RestaurantDetailViewController(coder: coder, restaurant: restaurant)
@@ -105,7 +112,7 @@ extension RestaurantViewController: UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let restaurant = restaurants[indexPath.row]
-        showRestaurant(restaurant)
+        pushTo(restaurant)
     }
 }
 

@@ -32,6 +32,10 @@
 		014F1A3A238C6B4B00D0D502 /* RestaurantDetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A39238C6B4B00D0D502 /* RestaurantDetailTableViewCell.swift */; };
 		014F1A3D238C725600D0D502 /* PublicAccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A3C238C725600D0D502 /* PublicAccess.swift */; };
 		014F1A41238CAC4D00D0D502 /* MapRegionGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 014F1A40238CAC4D00D0D502 /* MapRegionGenerator.swift */; };
+		014F1A43238D858200D0D502 /* Map.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 014F1A42238D858200D0D502 /* Map.storyboard */; };
+		01BE962C238D893500A77DF1 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE962B238D893500A77DF1 /* MapViewController.swift */; };
+		01BE962E238D961B00A77DF1 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE962D238D961B00A77DF1 /* Place.swift */; };
+		01BE9633238DEFEA00A77DF1 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE9632238DEFEA00A77DF1 /* CardView.swift */; };
 		01BF68062389E26F0073193E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68052389E26F0073193E /* AppDelegate.swift */; };
 		01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BF68072389E26F0073193E /* SceneDelegate.swift */; };
 		01BF680F2389E2700073193E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 01BF680E2389E2700073193E /* Assets.xcassets */; };
@@ -91,6 +95,10 @@
 		014F1A39238C6B4B00D0D502 /* RestaurantDetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTableViewCell.swift; sourceTree = "<group>"; };
 		014F1A3C238C725600D0D502 /* PublicAccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PublicAccess.swift; sourceTree = "<group>"; };
 		014F1A40238CAC4D00D0D502 /* MapRegionGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapRegionGenerator.swift; sourceTree = "<group>"; };
+		014F1A42238D858200D0D502 /* Map.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Map.storyboard; sourceTree = "<group>"; };
+		01BE962B238D893500A77DF1 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		01BE962D238D961B00A77DF1 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		01BE9632238DEFEA00A77DF1 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		01BF68022389E26F0073193E /* FoodieFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodieFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BF68052389E26F0073193E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		01BF68072389E26F0073193E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -215,6 +223,7 @@
 		014F1A21238B8D6800D0D502 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				01BE9631238DEFCF00A77DF1 /* Components */,
 				014F1A3B238C722D00D0D502 /* PublicOperators */,
 				014F1A25238B8EDB00D0D502 /* Extentions */,
 				014F1A22238B8D7B00D0D502 /* Infastructure */,
@@ -248,6 +257,14 @@
 				014F1A3C238C725600D0D502 /* PublicAccess.swift */,
 			);
 			path = PublicOperators;
+			sourceTree = "<group>";
+		};
+		01BE9631238DEFCF00A77DF1 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				01BE9632238DEFEA00A77DF1 /* CardView.swift */,
+			);
+			path = Components;
 			sourceTree = "<group>";
 		};
 		01BF67F92389E26E0073193E = {
@@ -316,6 +333,7 @@
 			isa = PBXGroup;
 			children = (
 				014F1A01238B37DD00D0D502 /* Restaurant.swift */,
+				01BE962D238D961B00A77DF1 /* Place.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -334,6 +352,7 @@
 				01BF683A238B0FC30073193E /* RestaurantViewController.swift */,
 				014F1A30238C4B8B00D0D502 /* RestaurantDetailViewController.swift */,
 				01BF6840238B127E0073193E /* InternetViewController.swift */,
+				01BE962B238D893500A77DF1 /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -345,6 +364,7 @@
 				01BF683C238B10CF0073193E /* Restaurant.storyboard */,
 				014F1A2E238C49AB00D0D502 /* RestaurantDetail.storyboard */,
 				01BF683E238B120A0073193E /* Internet.storyboard */,
+				014F1A42238D858200D0D502 /* Map.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -481,6 +501,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				01BF683F238B120A0073193E /* Internet.storyboard in Resources */,
+				014F1A43238D858200D0D502 /* Map.storyboard in Resources */,
 				01BF6843238B14F90073193E /* Main.storyboard in Resources */,
 				01BF68122389E2700073193E /* LaunchScreen.storyboard in Resources */,
 				01BF683D238B10CF0073193E /* Restaurant.storyboard in Resources */,
@@ -611,15 +632,18 @@
 				014F1A1A238B538100D0D502 /* RestaurantEndPoint.swift in Sources */,
 				014F1A35238C5EB300D0D502 /* RestaurantInfoTableViewCell.swift in Sources */,
 				01BF68062389E26F0073193E /* AppDelegate.swift in Sources */,
+				01BE9633238DEFEA00A77DF1 /* CardView.swift in Sources */,
 				014F1A09238B3C0700D0D502 /* NewJSONDecoder.swift in Sources */,
 				014F1A3D238C725600D0D502 /* PublicAccess.swift in Sources */,
 				014F1A24238B8D9900D0D502 /* ActivityIndicatorPresenter.swift in Sources */,
 				014F1A1C238B574000D0D502 /* RestaurantController.swift in Sources */,
 				014F1A12238B453A00D0D502 /* ServiceProtocol.swift in Sources */,
+				01BE962C238D893500A77DF1 /* MapViewController.swift in Sources */,
 				014F1A2B238B983000D0D502 /* CustomCollectionViewFlowLayout.swift in Sources */,
 				01BF68082389E26F0073193E /* SceneDelegate.swift in Sources */,
 				014F1A3A238C6B4B00D0D502 /* RestaurantDetailTableViewCell.swift in Sources */,
 				014F1A14238B456E00D0D502 /* HTTPMethod.swift in Sources */,
+				01BE962E238D961B00A77DF1 /* Place.swift in Sources */,
 				014F1A31238C4B8B00D0D502 /* RestaurantDetailViewController.swift in Sources */,
 				01BF6841238B127E0073193E /* InternetViewController.swift in Sources */,
 			);

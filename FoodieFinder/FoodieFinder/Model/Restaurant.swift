@@ -35,7 +35,7 @@ struct Contact: Codable, Equatable {
     }
     
     var facebookFormat: String {
-        "Facebook \(facebookName ??? "")"
+        "Facebook: \(facebookName ??? "Not listed")"
     }
 }
 
@@ -51,7 +51,7 @@ struct Location: Codable, Equatable {
     let state: String
     let country: String
     let formattedAddress: [String]
-    
+
     var addressInfo: String {
         formattedAddress.joined(separator: ", ")
     }

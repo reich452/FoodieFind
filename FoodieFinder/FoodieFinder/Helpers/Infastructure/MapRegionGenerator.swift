@@ -23,6 +23,9 @@ protocol MapRegionGenerator: class {
     /// Inits an annotation and adds it to a MKMapView
     func addAnnotation(with title: String, subtitle: String)
     
+    /// Inits an array of CusttomAnnotations and adds it to a MKMapView
+    func addAnnotations(from restaurants: [Restaurant])
+    
     /// TODO: - Incomplete 
     func removeAnnotation()
     
@@ -46,6 +49,22 @@ extension MapRegionGenerator where Self: UIViewController {
         annotation.subtitle = subtitle
         mapKitView.addAnnotation(annotation)
     }
+    
+    func addAnnotations(from restaurants: [Restaurant]) {
+        if restaurants.isEmpty { return }
+        var pointAnnotations = [MKPointAnnotation]()
+        
+        for restaurant in restaurants {
+//            let customAnnotation = CustomAnnotation(restaurant: restaurant)
+            let pointAnnotation = MKPointAnnotation()
+            pointAnnotation.coordinate = restaurant.coordinate2D
+            pointAnnotation.title = restaurant.name
+            pointAnnotation.subtitle = restaurant.category
+            pointAnnotations.append(pointAnnotation)
+        }
+        mapKitView.addAnnotations(pointAnnotations)
+    }
+    
     func removeAnnotation() {
         // TODO - add remove logic
     }
