@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Lunch Tyme-->
         <scene sceneID="tcX-9F-o1E">
             <objects>
                 <viewController storyboardIdentifier="RestaurantDetailViewController" id="aL1-Fy-Mre" customClass="RestaurantDetailViewController" customModule="FoodieFinder" customModuleProvider="target" sceneMemberID="viewController">
@@ -144,7 +144,7 @@
                         <viewLayoutGuide key="safeArea" id="sty-jC-wj2"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="5WN-yy-e0z"/>
-                    <navigationItem key="navigationItem" id="wLK-cW-Fer"/>
+                    <navigationItem key="navigationItem" title="Lunch Tyme" id="vcx-iY-ufD"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="mapView" destination="Pfr-Hq-nDY" id="Zzo-VX-hGK"/>
@@ -163,6 +163,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="K5l-Wx-Iky">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.26274509800000001" green="0.90980392160000001" blue="0.58431372550000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

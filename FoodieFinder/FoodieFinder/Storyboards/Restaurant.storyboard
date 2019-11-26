@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Lynch Time-->
+        <!--Lunch Tyme-->
         <scene sceneID="N4d-fM-0hC">
             <objects>
                 <viewController storyboardIdentifier="RestaurantViewController" id="Ogv-fA-yZj" customClass="RestaurantViewController" customModule="FoodieFinder" customModuleProvider="target" sceneMemberID="viewController">
@@ -87,7 +87,14 @@
                         <viewLayoutGuide key="safeArea" id="An1-dG-SEa"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Lunch" image="tab_lunch" selectedImage="tab_lunch" id="yjv-hi-E70"/>
-                    <navigationItem key="navigationItem" title="Lynch Time" id="c9q-gi-UPf"/>
+                    <navigationItem key="navigationItem" title="Lunch Tyme" id="c9q-gi-UPf">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icon_map" id="mWS-ap-p2D">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="viewMapBtnTapped:" destination="Ogv-fA-yZj" id="ghm-0V-sYQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="Ocx-zn-V24" id="8hI-AZ-PEa"/>
@@ -106,6 +113,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.2627450980392157" green="0.90980392156862744" blue="0.61172348259999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -119,6 +134,7 @@
     </scenes>
     <resources>
         <image name="cellGradientBackground" width="320" height="116"/>
+        <image name="icon_map" width="30" height="30"/>
         <image name="tab_lunch" width="24" height="24"/>
     </resources>
 </document>

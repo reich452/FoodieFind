@@ -20,7 +20,7 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
         return layout
     }()
     
-    // MARK: - OverRide
+    // MARK: - Override
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +37,11 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
         super.viewWillLayoutSubviews()
         self.reloadCollectionViewLayout(self.view.bounds.size.width)
     }
+    
+    @IBAction func viewMapBtnTapped(_ sender: Any) {
+        
+    }
+    // MARK: - Main
     
     private func reloadCollectionViewLayout(_ width: CGFloat) {
         collectionView.collectionViewLayout = self.collectionViewFlowLayout
