@@ -16,10 +16,11 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
     var restaurants: [Restaurant] = []
     
     private lazy var collectionViewFlowLayout: CustomCollectionViewFlowLayout = {
-        let layout = CustomCollectionViewFlowLayout(itemWith: view.frame.width, itemHeight: 180, lineSpace: 0, interItemSpace: 0)
-        layout.display = .list
+        let layout = CustomCollectionViewFlowLayout(display: .list, containerWidth: view.bounds.width, lineSpace: 0, interItemSpace: 0)
         return layout
     }()
+    
+    // MARK: - OverRide
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,23 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
         collectionView.delegate = self
         collectionView.prefetchDataSource = self
         loadRestarunts()
+        
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        self.reloadCollectionViewLayout(self.view.bounds.size.width)
+    }
+    
+    private func reloadCollectionViewLayout(_ width: CGFloat) {
+        collectionView.collectionViewLayout = self.collectionViewFlowLayout
+        if traitCollection.horizontalSizeClass == .regular && traitCollection.verticalSizeClass == .compact {
+            self.collectionViewFlowLayout.display = .grid(columns: 2)
+            return
+        }
+        
+        collectionViewFlowLayout.containerWidth = width
+        collectionViewFlowLayout.display = view.traitCollection.horizontalSizeClass == .compact && view.traitCollection.verticalSizeClass == .regular ? CollectionDisplay.list : CollectionDisplay.grid(columns: 2)
     }
     
     private func loadRestarunts() {
@@ -47,10 +65,12 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
         }
     }
     
+    // MARK: - Navigation
+    
     func showRestaurant(_ restaurant: Restaurant) {
         let stoyboard = UIStoryboard(name: "RestaurantDetail", bundle: nil)
         let detailVC = stoyboard.instantiateViewController(identifier: "RestaurantDetailViewController") { coder in
-          RestaurantDetailViewController(coder: coder, restaurant: restaurant)
+            RestaurantDetailViewController(coder: coder, restaurant: restaurant)
         }
         navigationController?.pushViewController(detailVC, animated: true)
     }

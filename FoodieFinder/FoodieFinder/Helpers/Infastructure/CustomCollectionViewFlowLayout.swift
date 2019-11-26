@@ -14,7 +14,25 @@ enum CollectionDisplay {
     /// One item per row
     case list
     /// More than one item per row
-    case grid
+    case grid(columns: Int)
+}
+
+extension CollectionDisplay: Equatable {
+    
+    public static func == (lhs: CollectionDisplay, rhs: CollectionDisplay) -> Bool {
+        
+        switch (lhs, rhs) {
+        case (.inline, .inline),
+             (.list, .list):
+            return true
+            
+        case (.grid(let lColumn), .grid(let rColumn)):
+            return lColumn == rColumn
+            
+        default:
+            return false
+        }
+    }
 }
 
 protocol CollectionItemSize {
@@ -30,9 +48,17 @@ class CustomCollectionViewFlowLayout: UICollectionViewFlowLayout, CollectionItem
     var itemWith: CGFloat = 0.0
     var itemHeight: CGFloat = 0.0
     
-    var display: CollectionDisplay = .grid {
+    var display: CollectionDisplay = .list {
         didSet {
             if display != oldValue {
+                self.invalidateLayout()
+            }
+        }
+    }
+    
+    var containerWidth: CGFloat = 0.0 {
+        didSet {
+            if containerWidth != oldValue {
                 self.invalidateLayout()
             }
         }
@@ -45,19 +71,11 @@ class CustomCollectionViewFlowLayout: UICollectionViewFlowLayout, CollectionItem
     
     // MARK: - Init
     
-    convenience init(itemWith: CGFloat, itemHeight: CGFloat, lineSpace: CGFloat = 10, interItemSpace: CGFloat = 10) {
-        self.init()
-        self.itemWith = itemWith
-        self.itemHeight = itemHeight
-        self.minimumLineSpacing = lineSpace
-        self.minimumInteritemSpacing = interItemSpace
-        self.configLayout()
-    }
-    
-    convenience init(display: CollectionDisplay, lineSpace: CGFloat = 10, interItemSpace: CGFloat = 10) {
+    convenience init(display: CollectionDisplay, containerWidth: CGFloat, lineSpace: CGFloat = 10, interItemSpace: CGFloat = 10) {
         self.init()
         
         self.display = display
+        self.containerWidth = containerWidth
         self.minimumLineSpacing = lineSpace
         self.minimumInteritemSpacing = interItemSpace
         self.configLayout()
@@ -76,23 +94,18 @@ class CustomCollectionViewFlowLayout: UICollectionViewFlowLayout, CollectionItem
                 self.itemSize = CGSize(width: collectionView.frame.width * 0.9, height: 300)
             }
             
-        case .grid:
+        case .grid(let column):
             
             self.scrollDirection = .vertical
-            if let collectionView = self.collectionView {
-                let optimisedWidth = (collectionView.frame.width - minimumInteritemSpacing) / 2
-                self.itemSize = CGSize(width: optimisedWidth, height: optimisedWidth) // keep as square
-            }
+            let spacing = CGFloat(column - 1) * minimumLineSpacing
+            let optimisedWidth = (containerWidth - spacing) / CGFloat(column)
+            self.itemSize = CGSize(width: optimisedWidth, height: optimisedWidth) // keep as squareuare
             
         case .list:
             self.scrollDirection = .vertical
-            if let collectionView = self.collectionView {
-                if self.itemHeight != 0.0 {
-                    self.itemSize = CGSize(width: collectionView.frame.width, height: itemHeight)
-                } else {
-                    self.itemSize = CGSize(width: collectionView.frame.width, height: 180)
-                }
-            }
+            self.scrollDirection = .vertical
+            self.itemSize = CGSize(width: containerWidth, height: 180)
+            
         }
     }
 }
