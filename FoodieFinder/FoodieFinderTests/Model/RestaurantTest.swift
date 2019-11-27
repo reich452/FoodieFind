@@ -14,7 +14,7 @@ private let mocLocation = Location(address: "5100 Belt Line Road, STE 502", cros
     "Addison, TX 75254",
     "United States"])
 private let mocContact = Contact(phone: "9723872337", formattedPhone: "(972) 387-2337", twitter: "hopdoddy", facebook: nil, facebookUsername: nil, facebookName: nil)
-private let mocRestaurant = Restaurant(name: "Hopdoddy Burger Bar", backgroundImageURL: "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/hopdoddy.png", category: "Burgers", contact: mocContact, location: mocLocation)
+private let mocRestaurant = Restaurant(name: "Hopdoddy Burger Bar", backgroundImageURL: URL(string: "http://sandbox.bottlerocketapps.com/BR_iOS_CodingExam_2015_Server/Images/hopdoddy.png")!, category: "Burgers", contact: mocContact, location: mocLocation)
 private let mocRestaurants = RestaurantsJSON(restaurants: [mocRestaurant])
 
 class RestaurantTest: XCTestCase, NewJSONDecoder {

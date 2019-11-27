@@ -24,7 +24,9 @@ class FoodieFinderUITests: XCTestCase {
         app.launch()
 
         // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+
+        app.collectionViews.children(matching: .cell).element(boundBy: 0).children(matching: .other).element.tap()
+        app.navigationBars["Hopdoddy Burger Bar"].buttons["Lunch Tyme"].tap()
     }
 
     func testLaunchPerformance() {
