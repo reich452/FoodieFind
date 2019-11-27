@@ -23,7 +23,7 @@ protocol MapRegionGenerator: class {
     /// Inits an annotation and adds it to a MKMapView
     func addAnnotation(with title: String, subtitle: String)
     
-    /// Inits an array of CusttomAnnotations and adds it to a MKMapView
+    /// Inits an array of MKPointAnnotation and adds it to a MKMapView
     func addAnnotations(from restaurants: [Restaurant])
     
     /// TODO: - Incomplete 
@@ -55,7 +55,6 @@ extension MapRegionGenerator where Self: UIViewController {
         var pointAnnotations = [MKPointAnnotation]()
         
         for restaurant in restaurants {
-//            let customAnnotation = CustomAnnotation(restaurant: restaurant)
             let pointAnnotation = MKPointAnnotation()
             pointAnnotation.coordinate = restaurant.coordinate2D
             pointAnnotation.title = restaurant.name
