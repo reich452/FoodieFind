@@ -36,7 +36,6 @@ opt_in_rules:
   - operator_usage_whitespace
   - overridden_super_call
   - override_in_extension
-  - pattern_matching_keywords
   - private_action
   - private_outlet
   - prohibited_super_call
@@ -74,3 +73,5 @@ ignores_function_declarations: true
 ignores_comments: true
 ignores_interpolated_strings: true
 ignores_urls: true
+
+function_parameter_count: 10

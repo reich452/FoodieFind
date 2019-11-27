@@ -40,8 +40,8 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
     // MARK: - Actions
     
     @IBAction private func viewMapBtnTapped(_ sender: Any) {
-        let stoyboard = UIStoryboard(name: "Map", bundle: nil)
-        let detailVC = stoyboard.instantiateViewController(identifier: "MapViewController") { [weak self] coder in
+        let stoyboard = UIStoryboard(name: Constants.mapSB.string, bundle: nil)
+        let detailVC = stoyboard.instantiateViewController(identifier: Constants.mapVC.string) { [weak self] coder in
             guard let self = self else { return nil }
            return MapViewController(coder: coder, restaurants: self.restaurants)
         }
@@ -80,8 +80,8 @@ class RestaurantViewController: UIViewController, ActivityIndicatorPresenter {
     // MARK: - Navigation
     
     func pushTo(_ restaurant: Restaurant) {
-        let stoyboard = UIStoryboard(name: "RestaurantDetail", bundle: nil)
-        let detailVC = stoyboard.instantiateViewController(identifier: "RestaurantDetailViewController") { coder in
+        let stoyboard = UIStoryboard(name: Constants.restaurantDetailSB.string, bundle: nil)
+        let detailVC = stoyboard.instantiateViewController(identifier: Constants.restaurantDetailVC.string) { coder in
             RestaurantDetailViewController(coder: coder, restaurant: restaurant)
         }
         navigationController?.pushViewController(detailVC, animated: true)
@@ -97,7 +97,7 @@ extension RestaurantViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "restaurantCell", for: indexPath) as? RestaurantCollectionViewCell else { return UICollectionViewCell() }
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: Constants.restaurantCellID.string, for: indexPath) as? RestaurantCollectionViewCell else { return UICollectionViewCell() }
         
         let restaurant = restaurants[indexPath.row]
         cell.configure(restaurant: restaurant)

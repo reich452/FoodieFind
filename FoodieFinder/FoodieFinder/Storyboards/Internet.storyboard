@@ -10,11 +10,11 @@
         <!--Internets-->
         <scene sceneID="9vY-mG-cor">
             <objects>
-                <viewController id="PBV-Tt-Zl5" sceneMemberID="viewController">
+                <viewController id="PBV-Tt-Zl5" customClass="WebViewController" customModule="FoodieFinder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="N5K-tl-xlI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="bhe-Wx-h6k"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Internets" image="tab_internets" id="dDH-Pn-6Np"/>

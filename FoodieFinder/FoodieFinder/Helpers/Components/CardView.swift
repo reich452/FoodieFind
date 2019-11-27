@@ -8,7 +8,8 @@
 
 import UIKit
 
-@IBDesignable class CardView: UIView {
+@IBDesignable
+class CardView: UIView {
     
     // MARK: - IB
     
