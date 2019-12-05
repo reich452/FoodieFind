@@ -23,7 +23,7 @@ public class Router<T: ServiceProtocol>: NetworkRouter {
     
     // MARK: - Init
     
-    init(configuration: URLSessionConfiguration) {
+   public init(configuration: URLSessionConfiguration) {
         self.session = URLSession(configuration: configuration)
     }
     
@@ -83,6 +83,7 @@ public class Router<T: ServiceProtocol>: NetworkRouter {
                 }
             }
         }
+        task = newTask
         newTask.resume()
     }
 }
